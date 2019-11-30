@@ -40,7 +40,8 @@ window.clearZeroTimeout(timeoutID);
 ```
 
 If the callback supplied to setZeroTimeout has already executed, or if the
-ID supplied to clearTimeout is invalid, clearTimeout will silently do nothing.
+ID supplied to clearZeroTimeout is invalid, clearZeroTimeout will silently do
+nothing.
 
 [setTimeout]: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 [minimum delay]: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
