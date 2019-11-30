@@ -36,7 +36,7 @@ The returned ID is a positive integer that can be passed to clearZeroTimeout.
 Cancels a timer previously set up by setZeroTimeout. Syntax is similar to
 [clearTimeout]:
 ```javascript
-window.clearTimeout(timeoutID);
+window.clearZeroTimeout(timeoutID);
 ```
 
 If the callback supplied to setZeroTimeout has already executed, or if the

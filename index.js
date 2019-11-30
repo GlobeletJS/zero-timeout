@@ -1,6 +1,7 @@
 initZeroTimeouts();
 
 function initZeroTimeouts() {
+  // setTimeout with true zero delay. https://github.com/GlobeletJS/zero-timeout
   const timeouts = [];
   var taskId = 0;
 
