@@ -26,7 +26,8 @@ function initZeroTimeouts() {
 
   // Now define the external functions to set or cancel a timeout
   window.setZeroTimeout = function(func, ...args) {
-    timeouts.push({ id: taskId++, func, args });
+    taskId += 1;
+    timeouts.push({ id: taskId, func, args });
     window.postMessage(messageKey, targetOrigin);
     return taskId;
   }
