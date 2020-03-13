@@ -1,6 +1,6 @@
 {
   "name": "zero-timeout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "setTimeout with true zero delay",
   "main": "index.js",
   "scripts": {
