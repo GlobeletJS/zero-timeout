@@ -1,9 +1,11 @@
-# set-zero-timeout
+# zero-timeout
 
 setTimeout with true zero delay
 
+![tests](https://github.com/GlobeletJS/zero-timeout/actions/workflows/node.js.yml/badge.svg)
+
 ## Motivation
-Like [setTimeout], but without the 4 millisecond [minimum delay].
+Like [setTimeout][], but without the 4 millisecond [minimum delay].
 
 Why a timer with no time? The supplied callback will be bumped to the back
 of the task queue. If other more critical tasks (like user interaction or
@@ -12,29 +14,29 @@ first. But if the queue is empty, the setZeroTimeout callback will be executed
 immediately.
 
 This can be useful for splitting up long-running tasks across frames.
-See [David Baron's blog post] for more on the motivation and methodology.
+See [David Baron's blog post][] for more on the motivation and methodology.
 
 ## Usage
-set-zero-timeout is provided as an ESM import.
+zero-timeout is provided as an ESM import.
 ```javascript
-import 'set-zero-timeout';
+import 'zero-timeout';
 ```
 
 Importing the module adds two methods to the global scope.
 
 ### setZeroTimeout
-This method's interface is just like [setTimeout] but without the `delay`
+This method's interface is just like [setTimeout][] but without the `delay`
 argument:
 ```javascript
-var timeoutID = window.setTimeout(function);
-var timeoutID = window.setTimeout(function, arg1, arg2, ...);
+var timeoutID = window.setZeroTimeout(function);
+var timeoutID = window.setZeroTimeout(function, arg1, arg2, ...);
 ```
 
 The returned ID is a positive integer that can be passed to clearZeroTimeout.
 
 ### clearZeroTimeout
 Cancels a timer previously set up by setZeroTimeout. Syntax is similar to
-[clearTimeout]:
+[clearTimeout][]:
 ```javascript
 window.clearZeroTimeout(timeoutID);
 ```

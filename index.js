@@ -30,10 +30,10 @@ function initZeroTimeouts() {
     timeouts.push({ id: taskId, func, args });
     window.postMessage(messageKey, targetOrigin);
     return taskId;
-  }
+  };
 
   window.clearZeroTimeout = function(id) {
     let task = timeouts.find(timeout => timeout.id === id);
     if (task) task.canceled = true;
-  }
+  };
 }
