@@ -26,6 +26,6 @@
   "homepage": "https://github.com/GlobeletJS/zero-timeout#readme",
   "devDependencies": {
     "eslint": "^7.30.0",
-    "eslint-config-globeletjs": "^0.0.3"
+    "eslint-config-globeletjs": "^0.0.6"
   }
 }
